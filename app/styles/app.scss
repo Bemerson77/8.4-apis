@@ -252,6 +252,7 @@ a:hover {
   height: 130vh;
 }
 
+
 .add-img {
   cursor: pointer;
   height: 300px;
@@ -316,6 +317,10 @@ a:hover {
 #servings {
   display: inline-block;
   width: 50px;
+  box-shadow: none;
+  background-color: rgba(249, 249, 249, 1);
+  border: none;
+  border-radius: 0;
 }
 
 .ingredient-wrapper {
@@ -367,6 +372,7 @@ a:hover {
   background-color: rgba(55, 152, 146, 1);
   color: white;
   @extend %ingredient-form-style;
+  border-radius: 3px;
 }
 
 #add-ingredient:hover {
@@ -405,11 +411,26 @@ a:hover {
   margin-top: 15px;
 }
 
+#prep-time {
+  box-shadow: none;
+  background-color: rgba(249, 249, 249, 1);
+  border: none;
+  border-radius: 0;
+}
+
+#cook-time {
+  box-shadow: none;
+  background-color: rgba(249, 249, 249, 1);
+  border: none;
+  border-radius: 0;
+}
+
 #add-direction {
   width: 20%;
   background-color: rgba(55, 152, 146, 1);
   color: white;
   @extend %ingredient-form-style;
+  border-radius: 3px;
 }
 
 #add-direction:hover {
@@ -435,6 +456,7 @@ a:hover {
   font-size: 15px;
   font-weight: bold;
   @extend %ingredient-form-style;
+  border-radius: 3px;
 }
 
 #submit-recipe:hover {
