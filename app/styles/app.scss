@@ -1,3 +1,4 @@
+// $container-large-desktop: (1500px);
 
 // Bootstrap Variables
 $icon-font-path: '../../node_modules/bootstrap-sass/assets/fonts/bootstrap/';
@@ -172,6 +173,25 @@ textarea {
   margin-top: 60px;
 }
 
+.form-signup button {
+  border: 1px solid rgba(55, 152, 146, 1);
+  background-color: rgba(55, 152, 146, 1);
+}
+
+.form-signup button:hover {
+  border: 1px solid rgba(57, 172, 165, 1);
+  background-color: rgba(57, 172, 165, 1);
+}
+
+.form-login button {
+  border: 1px solid rgba(55, 152, 146, 1);
+  background-color: rgba(55, 152, 146, 1);
+}
+
+.form-login button:hover {
+  border: 1px solid rgba(57, 172, 165, 1);
+  background-color: rgba(57, 172, 165, 1);
+}
 
 
 
@@ -236,6 +256,7 @@ a:hover {
 
 // recipe-display
 
+
 .recipe-display {
   height: 130vh;
 }
@@ -243,6 +264,10 @@ a:hover {
 .image-container {
   cursor: pointer;
   margin-top: 30px;
+}
+
+#recipe-list {
+  padding: 0;
 }
 
 // recipe-add
@@ -467,52 +492,3 @@ a:hover {
   padding: 0;
   margin-top: 20px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// .recipe-add-container input {
-//   background-color: rgba(241, 241, 241, 1);
-//   font-size: 17px;
-// }
-//
-// .basic-info {
-//   height: 100vh;
-// }
-//
-// .basic-info-txt {
-//   text-align: right;
-// }
-//
-// .basic-info-border {
-//   height: 12px;
-//   border-bottom: 1px solid rgba(203, 203, 203, 1);
-// }
-//
-// .add-photo {
-//   color: rgba(108, 108, 108, 1);
-//   border-radius: 5px;
-//   height: 170px;
-//   background-color: rgba(191, 191, 191, 1);
-//   box-shadow: inset 1px 1px 10px #888888;
-// }
-//
-//
-// .title-form input {
-//   height: 50px;
-// }
-//
-// #by {
-//   margin-top: 20px;
-//
-// }

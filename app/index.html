@@ -7,102 +7,117 @@
     <link rel="stylesheet" href="css/app.css">
     <link href='https://fonts.googleapis.com/css?family=Playfair+Display' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="icon" href="favicon.ico" style="image/png">
   </head>
   <body>
 
     <!-- header -->
-    <div class="header-outer">
-        <header class="header container">
-          <div class="header-inner row">
+    <div id="header">
+      <!-- <div class="header-outer">
+          <header id="header" class="header container">
+            <div class="header-inner row">
 
-            <div class="logo-container">
-              <div class="logo">S</div>
+              <div class="logo-container">
+                <div class="logo">S</div>
+              </div>
+
+              <div class="header-nav">
+                <ul class="header-nav-items">
+                  <li class="header-nav-item">
+                    <span class="glyphicon glyphicon-plus" id="nav-add"></span>
+                  </li>
+                  <li class="header-nav-item">
+                    <span class="glyphicon glyphicon-user" id="nav-user"></span>
+                  </li>
+                </ul>
+              </div>
+
             </div>
-
-            <div class="header-nav">
-              <ul class="header-nav-items">
-                <li class="header-nav-item">
-                  <span class="glyphicon glyphicon-plus" id="nav-add"></span>
-                </li>
-                <li class="header-nav-item">
-                  <span class="glyphicon glyphicon-user" id="nav-user"></span>
-                </li>
-              </ul>
-            </div>
-
-          </div>
-        </header>
+          </header>
+      </div> -->
     </div>
 
     <!-- PAGE BODY -->
 
     <!-- side bar -->
     <div class="page-body-outer container-fluid">
-      <div class="page-body-inner row">
+      <div class="page-body-inner row-fluid">
         <!-- account forms -->
-        <!-- <div class="account-forms col-xs-6 col-xs-offset-3">
-          <div>
-            <div class="logo-container">
-              <div class="logo">S</div>
+        <div id="account-forms">
+          <!-- <div class="account-forms col-xs-6 col-xs-offset-3">
+            <div>
+              <div class="logo-container">
+                <div class="logo">S</div>
+              </div>
             </div>
-          </div>
-          <form id="login" class="form-signin">
-            <h2 class="form-signin-heading">Please login</h2>
-            <input id="username" type="text" class="form-control" name="email" placeholder="Email Address" required="" autofocus="" />
-            <input type="password" class="form-control" name="password" placeholder="Password" required=""/>
-            <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
-          </form>
+            <form id="login" class="form-signin">
+              <h2 class="form-signin-heading">Please login</h2>
+              <input id="username" type="text" class="form-control" name="email" placeholder="Email Address" required="" autofocus="" />
+              <input type="password" class="form-control" name="password" placeholder="Password" required=""/>
+              <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
+            </form>
 
-            <div class="or-container">
-              <span class="or-border col-xs-5"></span>
-              <span class="or col-xs-2 text-center">Or</span>
-              <span class="or-border col-xs-5"></span>
-            </div>
+              <div class="or-container">
+                <span class="or-border col-xs-5"></span>
+                <span class="or col-xs-2 text-center">Or</span>
+                <span class="or-border col-xs-5"></span>
+              </div>
 
-          <form id="signup" class="form-signup" method="post">
-            <h2 class="form-signin-heading">No Account? Please sign up</h2>
-            <input type="text" class="form-control" name="email" placeholder="Email Address" required="" autofocus="" />
-            <input type="password" class="form-control" name="password" placeholder="Password" required=""/>
-            <button class="btn btn-lg btn-primary btn-block" type="submit">Sign Up!!!</button>
-          </form> -->
+            <form id="signup" class="form-signup" method="post">
+              <h2 class="form-signin-heading">No Account? Please sign up</h2>
+              <input type="text" class="form-control" name="email" placeholder="Email Address" required="" autofocus="" />
+              <input type="password" class="form-control" name="password" placeholder="Password" required=""/>
+              <button class="btn btn-lg btn-primary btn-block" type="submit">Sign Up!!!</button>
+            </form>
 
+          </div> -->
         </div>
-        <div class="sidebar col-xs-2">
-          <ul class="sidebar-nav">
-            <li id="side-popular" class="sidebar-nav-items">
-              <a href="#">Popular Rescipes</a>
-            </li>
-            <li id="side-recipes" class="sidebar-nav-items">
-              <a href="#">My Recipes</a>
-            </li>
-            <li id="side-favorites" class="sidebar-nav-items">
-              <a href="#">My Favorites</a>
-            </li>
-            <li id="side-pantry" class="sidebar-nav-items">
-              <a href="#">My Pantry</a>
-            </li>
-          </ul>
+
+        <div id="sidebar">
+          <!-- <div class="sidebar col-xs-2">
+            <ul class="sidebar-nav">
+              <li id="side-popular" class="sidebar-nav-items">
+                <a href="#">Popular Rescipes</a>
+              </li>
+              <li id="side-recipes" class="sidebar-nav-items">
+                <a href="#">My Recipes</a>
+              </li>
+              <li id="side-favorites" class="sidebar-nav-items">
+                <a href="#">My Favorites</a>
+              </li>
+              <li id="side-pantry" class="sidebar-nav-items">
+                <a href="#">My Pantry</a>
+              </li>
+            </ul>
+          </div> -->
         </div>
+
+
         <div class="recipe-display-container col-xs-10">
-          <div class="recipe-display row">
+          <div class="recipe-display row center-block">
 
           <!-- recipe-display -->
 
-            <!-- <div class="image-container col-xs-3">
-              <img src="https://unsplash.it/400/400/?random" alt="">
-            </div>
-            <div class="image-container col-xs-3">
-              <img src="https://unsplash.it/400/400/?random" alt="">
-            </div>
-            <div class="image-container col-xs-3">
-              <img src="https://unsplash.it/400/400/?random" alt="">
-            </div>
-            <div class="image-container col-xs-3">
-              <img src="https://unsplash.it/400/400/?random" alt="">
-            </div> -->
+          <div id="recipe-list">
+
+              <div class="image-container col-xs-3">
+                <img src="https://unsplash.it/400/400/?random" alt="">
+              </div>
+              <div class="image-container col-xs-3">
+                <img src="https://unsplash.it/400/400/?random" alt="">
+              </div>
+              <div class="image-container col-xs-3">
+                <img src="https://unsplash.it/400/400/?random" alt="">
+              </div>
+              <div class="image-container col-xs-3">
+                <img src="https://unsplash.it/400/400/?random" alt="">
+              </div>
+
+          </div>
 
           <!-- recipe-add -->
-          <div class="recipe-add-container col-xs-8 col-xs-offset-2">
+          <div id="recipe-form">
+          <!-- <div class="recipe-add-container col-xs-8 col-xs-offset-2">
             <form class="form-group" action="/">
               <div class="recipe-add row">
 
@@ -182,47 +197,23 @@
                       </div>
                     </div>
 
-                    <div class="submit-recipe-wrapper row">
-                      <h4 class="text-center">Ready to submit your recipe for everyone to try?</h4>
-                      <div class="submit-button-wrapper">
-                        <button id="submit-recipe" type="submit" class="btn btn-default center-block">Publish Recipe</button>
+                      <div class="submit-recipe-wrapper row">
+                        <h4 class="text-center">Ready to submit your recipe for everyone to try?</h4>
+                        <div class="submit-button-wrapper">
+                          <button id="submit-recipe" type="submit" class="btn btn-default center-block">Publish Recipe</button>
+                        </div>
                       </div>
                     </div>
-
-                    </div>
-
                   </div>
-              </div>
-            </form>
-
-              <!-- <div class="basic-info row">
-                <div class="add-photo col-xs-4 text-center">
-                  <div>
-                    <span class="add-photo-icon glyphicon glyphicon-picture"></span>
-                  </div>
-                  <div>
-                    <span class="add-photo-txt">Add Photo</span>
-                  </div>
-                </div>
-
-                <form class="title-form col-xs-8">
-                  <input type="text" class="form-control" id="recipe-name" placeholder="Recipe Name">
-                  <input type="text" class="form-control" id="by" placeholder="By">
-
-                <select class="form-control col-xs-3">
-                  <option>1</option>
-                  <option>2</option>
-                  <option>3</option>
-                  <option>4</option>
-                  <option>5</option>
-                </select>
-                </form>
-              </div> -->
+              </form>
+            </div> -->
+          </div>
 
            </div>
 
           </div>
         </div>
+
       </div>
     </div>
 
