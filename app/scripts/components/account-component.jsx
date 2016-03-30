@@ -50,8 +50,4 @@ var AccountComponent = React.createClass({
 
 
 
-
-
-module.exports = {
-  AccountComponent: AccountComponent
-};
+module.exports = AccountComponent;

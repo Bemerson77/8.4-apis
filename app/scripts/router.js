@@ -8,6 +8,7 @@ var ReactDOM = require('react-dom');
 
 
 // local
+var Interface = ('./components/interface.jsx')
 var AccountComponent = require('./components/account-component.jsx').AccountComponent;
 var HeaderComponent = require('./components/header.jsx');
 var SidebarComponent = require('./components/sidebar.jsx');
@@ -17,26 +18,21 @@ var SidebarComponent = require('./components/sidebar.jsx');
 var Router = Backbone.Router.extend({
   routes: {
     '': 'account',
-    'main': 'main',
+    'dashboard': 'dashboard',
+    'add': 'add'
   },
 
   account: function(){
-    ReactDOM.render(
-      React.createElement(AccountComponent),
-      document.getElementById('account-forms')
-    );
+    this.current = 'account';
   },
-  main: function(){
-    ReactDOM.render(
-      React.createElement(HeaderComponent),
-      document.getElementById('header')
-    );
-    ReactDOM.render(
-      React.createElement(SidebarComponent),
-      document.getElementById('sidebar')
-    );
+  dashboard: function(){
+    this.current = 'dashboard';
   },
-  
+  add: function(){
+    this.current = 'add';
+  }
+
+
 
 
 
@@ -44,4 +40,4 @@ var Router = Backbone.Router.extend({
 
 
 
-module.exports = Router;
+module.exports = new Router();

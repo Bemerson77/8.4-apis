@@ -28,7 +28,9 @@ var HeaderComponent = React.createClass({
               <div className="header-nav">
                 <ul className="header-nav-items">
                   <li className="header-nav-item">
-                    <span className="glyphicon glyphicon-plus" id="nav-add"></span>
+                    <a className="add-recipe" href="#add">
+                      <span className="glyphicon glyphicon-plus" id="nav-add"></span>
+                    </a>
                   </li>
                   <li className="header-nav-item">
                     <span className="glyphicon glyphicon-user" id="nav-user"></span>

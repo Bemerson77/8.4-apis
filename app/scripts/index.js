@@ -8,16 +8,20 @@ var ReactDOM = require('react-dom');
 
 
 // local
-var Router = require('./router');
-
-var router = new Router();
-
+var router = require('./router');
+var Interface = require('./components/interface.jsx');
 
 
+Backbone.history.start();
+
+
+ReactDOM.render(
+  React.createElement(Interface,{ router: router }),
+  document.getElementById('app')
+);
 
 
 
-
-$(function(){
-  Backbone.history.start();
-});
+// $(function(){
+//   Backbone.history.start();
+// });
