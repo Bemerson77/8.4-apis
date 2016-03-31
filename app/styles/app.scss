@@ -35,6 +35,7 @@ $icon-font-path: '../../node_modules/bootstrap-sass/assets/fonts/bootstrap/';
 //
 // }
 
+
 *,
 *::before,
 *::after {
@@ -45,7 +46,15 @@ img {
   max-width: 100%;
 }
 
+html, body {
+   height: 100%;
+   width: 100%;
+
+}
+
 body {
+  // min-height: 100%;
+  // height: auto;
   font-family: 'Playfair Display', serif;
   @extend %darkgrey-color;
 }
@@ -144,6 +153,7 @@ textarea {
 
 
 .account-forms {
+  border-radius: 6px;
   box-shadow: 1px 1px 10px #888888;
   background-color: rgba(228, 228, 228, 1);
   margin-top: 10vh;
@@ -178,6 +188,10 @@ textarea {
   background-color: rgba(55, 152, 146, 1);
 }
 
+.form-signup button:focus {
+  outline: none;
+}
+
 .form-signup button:hover {
   border: 1px solid rgba(57, 172, 165, 1);
   background-color: rgba(57, 172, 165, 1);
@@ -186,6 +200,10 @@ textarea {
 .form-login button {
   border: 1px solid rgba(55, 152, 146, 1);
   background-color: rgba(55, 152, 146, 1);
+}
+
+.form-login button:focus {
+  outline: none;
 }
 
 .form-login button:hover {
@@ -380,6 +398,10 @@ a:hover {
   @extend %ingredient-form-style;
 }
 
+#delete-ingredient:focus {
+  outline: none;
+}
+
 #delete-ingredient:hover {
   color: rgba(191, 27, 49, 1);
 }
@@ -398,6 +420,10 @@ a:hover {
   color: white;
   @extend %ingredient-form-style;
   border-radius: 3px;
+}
+
+#add-ingredient:focus {
+  outline: none;
 }
 
 #add-ingredient:hover {
@@ -458,6 +484,10 @@ a:hover {
   border-radius: 3px;
 }
 
+#add-direction:focus {
+  outline: none;
+}
+
 #add-direction:hover {
   background-color: rgba(57, 172, 165, 1);
 }
@@ -482,6 +512,10 @@ a:hover {
   font-weight: bold;
   @extend %ingredient-form-style;
   border-radius: 3px;
+}
+
+#submit-recipe:focus {
+  outline: none;
 }
 
 #submit-recipe:hover {

@@ -5,15 +5,66 @@ var $ = require('jquery');
 var React = require('react');
 var ReactDOM = require('react-dom');
 var Backbone = require('backbone');
+var LinkedStateMixin = require('react/lib/LinkedStateMixin');
 require('backbone-react-component');
 
 
 
 // local
 
+var IngredientFormset = React.createClass({
+  render: function(){
+    return (
+      <div className="ingredients row">
+        <div className="ingredient-wrapper col-xs-10 col-xs-offset-1">
+            <input ref={"amount" + this.props.count}  type="text" name={"amount" + this.props.count} className="form-control" id="amount" placeholder="Amount"/>
+            <select ref={"units" + this.props.count} name={"units" + this.props.count} className="unit form-control" defaultValue="A">
+              <option disabled value="A">unit</option>
+              <option value="B">tsp.</option>
+              <option value="C">tbsp.</option>
+              <option value="D">fl oz(s)</option>
+              <option value="E">cup(s)</option>
+              <option value="F">pt(s)</option>
+              <option value="G">qt(s)</option>
+              <option value="H">gal(s)</option>
+              <option value="I">oz(s)</option>
+              <option value="J">lb(s)</option>
+            </select>
+            <input ref={"ingredient" + this.props.count} type="text" name={"ingredient" + this.props.count} className="form-control" id="ingredient" placeholder="Ingredient"/>
+            <button ref={"button" + this.props.count} onClick={this.props.handleDelete} id="delete-ingredient" type="button" className="btn btn-default"><i className="fa fa-times-circle"></i></button>
+        </div>
+      </div>
+    )
+  }
+});
+
 
 var AddRecipe = React.createClass({
+  mixins: [Backbone.React.Component.mixin, LinkedStateMixin],
+  getInitialState: function() {
+    return {ingredientCount: 2};
+  },
+  addIngredient: function(e){
+    e.preventDefault();
+    var newCount = this.state.ingredientCount + 1;
+    this.setState({'ingredientCount': newCount});
+  },
+  handleDelete: function(e){
+    e.preventDefault();
+    var self = this;
+    var newCount = self.state.ingredientCount - 1;
+    self.setState({'ingredientCount': newCount});
+  },
   render: function(){
+
+    var ingredientForms = [];
+    for(var i=1; i<= this.state.ingredientCount; i++){
+      var count = i;
+      ingredientForms.push(<IngredientFormset key={count} handleDelete={this.handleDelete} count={count} ref={"formset"+count}/>);
+    }
+
+
+
     return (
       <div id="recipe-form">
       <div className="recipe-add-container col-xs-8 col-xs-offset-1">
@@ -46,29 +97,11 @@ var AddRecipe = React.createClass({
                 </span>
               </div>
 
-              <div className="ingredients row">
-                <div className="ingredient-wrapper col-xs-10 col-xs-offset-1">
-                    <input type="text" name="amount" className="form-control" id="amount" placeholder="Amount"/>
-                    <select className="unit form-control">
-                      <option selected disabled>unit</option>
-                      <option>tsp.</option>
-                      <option>tbsp.</option>
-                      <option>fl oz</option>
-                      <option>c</option>
-                      <option>pt</option>
-                      <option>qt</option>
-                      <option>gal</option>
-                      <option>oz</option>
-                      <option>lb</option>
-                    </select>
-                    <input type="text" name="ingredient" className="form-control" id="ingredient" placeholder="Ingredient"/>
-                    <button id="delete-ingredient" type="button" className="btn btn-default"><i className="fa fa-times-circle"></i></button>
-                </div>
-              </div>
+              {ingredientForms}
 
                 <div className="ingredient-add-wrapper row">
                   <div className="ingredient-add">
-                    <button id="add-ingredient" type="button" className="btn btn-default center-block"><i className="fa fa-plus"></i> Add Ingredient</button>
+                    <button onClick={this.addIngredient} id="add-ingredient" type="button" className="btn btn-default center-block"><i className="fa fa-plus"></i> Add Ingredient</button>
                   </div>
                 </div>
 

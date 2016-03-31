@@ -13,6 +13,7 @@ require('backbone-react-component');
 
 
 var RecipeList = React.createClass({
+  mixins: [Backbone.React.Component.mixin],
   render: function(){
     return (
       <div id="recipe-list">

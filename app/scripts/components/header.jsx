@@ -22,7 +22,9 @@ var HeaderComponent = React.createClass({
             <div className="header-inner row">
 
               <div className="logo-container">
-                <div className="logo">S</div>
+                <a className="logo-link" href="#dashboard">
+                  <div className="logo">S</div>
+                </a>
               </div>
 
               <div className="header-nav">
@@ -33,7 +35,9 @@ var HeaderComponent = React.createClass({
                     </a>
                   </li>
                   <li className="header-nav-item">
-                    <span className="glyphicon glyphicon-user" id="nav-user"></span>
+                    <a className="logout-link" onClick={this.props.logout}>
+                      <span className="glyphicon glyphicon-user" id="nav-user"></span>
+                    </a>
                   </li>
                 </ul>
               </div>

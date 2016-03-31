@@ -5,6 +5,7 @@ var $ = require('jquery');
 var Backbone = require('backbone');
 var React = require('react');
 var ReactDOM = require('react-dom');
+var Parse = require('parse');
 
 
 // local
@@ -21,15 +22,26 @@ var Router = Backbone.Router.extend({
     'dashboard': 'dashboard',
     'add': 'add'
   },
-
+  requireLogin: function(){
+    var currentUser = Parse.User.current();
+      if (!currentUser) {
+        this.navigate('', {trigger: true});
+      }
+  },
   account: function(){
     this.current = 'account';
+    var currentUser = Parse.User.current();
+      if (currentUser) {
+        this.navigate('dashboard', {trigger: true});
+      }
   },
   dashboard: function(){
     this.current = 'dashboard';
+    this.requireLogin();
   },
   add: function(){
     this.current = 'add';
+    this.requireLogin();
   }
 
 

@@ -16,8 +16,8 @@ var RecipeList = require('./recipe-list.jsx');
 var AddRecipe = require('./add-recipe.jsx');
 
 var Dashboard = React.createClass({
+  mixins: [Backbone.React.Component.mixin],
   render: function(){
-    console.log(this.props.router.current);
     var currentComponent;
     if (this.props.router.current == 'dashboard'){
       currentComponent = <RecipeList />
@@ -27,7 +27,7 @@ var Dashboard = React.createClass({
     return (
     <div>
 
-        <Header />
+        <Header logout={this.props.logout} />
 
 
         <Sidebar />

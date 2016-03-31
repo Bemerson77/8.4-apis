@@ -23,5 +23,11 @@ ReactDOM.render(
 
 
 // $(function(){
-//   Backbone.history.start();
+//   function windowH() {
+//     var wH = $(window).height();
+//
+//     $('.sidebar').css({height: wH});
+//  }
+//
+// windowH();
 // });
