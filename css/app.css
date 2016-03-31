@@ -5785,6 +5785,10 @@ body, .or {
 img {
   max-width: 100%; }
 
+html, body {
+  height: 100%;
+  width: 100%; }
+
 body {
   font-family: 'Playfair Display', serif; }
 
@@ -5841,6 +5845,7 @@ textarea {
   padding: 0 0 0 0; }
 
 .account-forms {
+  border-radius: 6px;
   box-shadow: 1px 1px 10px #888888;
   background-color: #e4e4e4;
   margin-top: 10vh;
@@ -5866,6 +5871,9 @@ textarea {
   border: 1px solid #379892;
   background-color: #379892; }
 
+.form-signup button:focus {
+  outline: none; }
+
 .form-signup button:hover {
   border: 1px solid #39aca5;
   background-color: #39aca5; }
@@ -5873,6 +5881,9 @@ textarea {
 .form-login button {
   border: 1px solid #379892;
   background-color: #379892; }
+
+.form-login button:focus {
+  outline: none; }
 
 .form-login button:hover {
   border: 1px solid #39aca5;
@@ -5997,6 +6008,9 @@ a:hover {
   font-size: 20px;
   width: 10%; }
 
+#delete-ingredient:focus {
+  outline: none; }
+
 #delete-ingredient:hover {
   color: #bf1b31; }
 
@@ -6011,6 +6025,9 @@ a:hover {
   background-color: #379892;
   color: white;
   border-radius: 3px; }
+
+#add-ingredient:focus {
+  outline: none; }
 
 #add-ingredient:hover {
   background-color: #39aca5; }
@@ -6056,6 +6073,9 @@ a:hover {
   color: white;
   border-radius: 3px; }
 
+#add-direction:focus {
+  outline: none; }
+
 #add-direction:hover {
   background-color: #39aca5; }
 
@@ -6075,6 +6095,9 @@ a:hover {
   font-size: 15px;
   font-weight: bold;
   border-radius: 3px; }
+
+#submit-recipe:focus {
+  outline: none; }
 
 #submit-recipe:hover {
   background-color: #39aca5; }
