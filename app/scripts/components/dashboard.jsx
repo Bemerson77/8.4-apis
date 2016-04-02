@@ -22,7 +22,7 @@ var Dashboard = React.createClass({
     if (this.props.router.current == 'dashboard'){
       currentComponent = <RecipeList />
     }else if (this.props.router.current == 'add'){
-      currentComponent = <AddRecipe />
+      currentComponent = <AddRecipe router={this.props.router} />
     }
     return (
     <div>

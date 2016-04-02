@@ -79,14 +79,15 @@ var AddRecipe = React.createClass({
           var formset = self.refs["formset" + i];
 
           var amount = formset.refs["amount"].value;
-
+          var units = formset.refs["units"].value;
+          var ingredientName = formset.refs["ingredient"].value;
 
 
           var ingredient = new models.Ingredient();
           ingredient.set({
             "amount": amount,
-            // "units": units,
-            // "ingredient": ingredient,
+            "units": units,
+            "ingredientName": ingredientName,
             "recipe": recipe
           });
 
@@ -96,6 +97,7 @@ var AddRecipe = React.createClass({
         Parse.Object.saveAll(recipeIngredients, {
           success: function(list) {
             alert('ing saved!');
+            router.navigate('dashboard', {trigger: true});
           },
           error: function(error) {
             console.log(error);
